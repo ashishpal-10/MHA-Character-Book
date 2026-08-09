@@ -41,7 +41,7 @@ const Section = () => {
 
                         <button className='bg-orange-400 px-8 sm:px-10 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl lg:text-2xl mt-8 lg:mt-10 text-black hover:bg-orange-400 hover:text-white hover:translate-y-1'
                        onClick={() => navigate("/characters")} >
-                            Mha Book
+                            MHA Book
                         </button>
 
                     </div>
