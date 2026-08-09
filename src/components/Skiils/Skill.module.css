@@ -1,0 +1,181 @@
+.card {
+  position: relative;
+  height: 460px;
+
+
+  color: white;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+    border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  
+   width: 280px;
+  aspect-ratio: 2 / 3;
+
+  overflow: hidden;
+
+}
+
+/* Background geometric pattern */
+.pattern {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+
+  opacity: 0.4;
+}
+
+/* Large faint MHA-style shape */
+.pattern::before {
+  content: "M";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 260px;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.08);
+
+  z-index: 0;
+}
+
+
+.name {
+  position: relative;
+  z-index: 2;
+
+  margin: 20px 0 0;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.characterWrapper {
+  position: absolute;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 82%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  z-index: 1;
+  transition: .5 ease-in-out;
+}
+
+.characterWrapper .character:hover{
+    scale: 1.2;
+}
+
+.character {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+    transition: .5 ease-in-out;
+  filter: drop-shadow(
+    4px 6px 5px rgba(0, 0, 0, 0.35)
+  );
+}
+
+
+.logo {
+  position: absolute;
+
+  right: 8px;
+  bottom: 8px;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+ 
+
+  text-shadow: 1px 1px 2px #000;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.cardGrid  {
+  width: 100%;
+    padding:50px;
+    text-align: center;
+  background-color: rgb(227, 221, 221);
+}
+
+.cardGrid h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+    
+     -webkit-text-stroke: 4px black;
+}
+
+.box{
+     display: grid;
+  grid-template-columns: repeat(4, 280px);
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+
+
+}
+
+
+@media (max-width: 768px) {
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+}
