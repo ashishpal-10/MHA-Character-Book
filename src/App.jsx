@@ -1,5 +1,4 @@
 import React from 'react'
-import "./APP.css"
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import Landing from './components/Landing';
