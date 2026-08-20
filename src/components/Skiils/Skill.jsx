@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./skill.module.css";
+import styles from "./Skill.module.css";
 import Image from "../../../public/mhalogo.png"
 
 const CharacterCard = ({
