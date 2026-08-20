@@ -2,7 +2,7 @@ import React from "react";
 // import CharacterCard from "./CharacterCard";
 import Skill from "./Skill.jsx"
 import character from "../../data/Character.js";
-import Styles from "./Skill.module.css"
+import Styles from "./Skill.module.css";
 import { useNavigate } from "react-router-dom";
 
 
